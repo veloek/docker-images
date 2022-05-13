@@ -1,5 +1,5 @@
 FROM debian:bullseye
-MAINTAINER Louis Fradin <louis.fradin@gmail.com>
+LABEL org.opencontainers.image.authors="vegard@loekken.org"
 
 # Update distrib
 RUN apt-get update
