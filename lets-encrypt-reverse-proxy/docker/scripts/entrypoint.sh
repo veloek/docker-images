@@ -8,12 +8,6 @@ echo "### Waiting for ${STARTUP_WAIT} seconds... "
 sleep ${STARTUP_WAIT}
 echo "Done"
 
-# Renew existing and expiring certificates if existing
-# if [ -d "/etc/letsencrypt/live" ]; then
-#  echo "### Renew existing and expiring certificates"
-#  certbot renew --rsa-key-size $RSA_KEY_SIZE
-# fi
-
 # Generating each certificate
 i=1
 var=CERT1
@@ -31,7 +25,7 @@ do
 
   # Generate certificates
   echo "Generate ${!var} certificate"
-  certbot certonly  --text --non-interactive --rsa-key-size $RSA_KEY_SIZE \
+  certbot certonly  --text --non-interactive --rsa-key-size 4096 \
                     --email $LETSENCRYPT_EMAIL --agree-tos --standalone --expand \
                     --reinstall $SUBDOMAINS_ARGS
 

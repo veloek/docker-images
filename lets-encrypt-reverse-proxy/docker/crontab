@@ -1,0 +1,1 @@
+30 3 10 * * root test -d /etc/letsencrypt/live && certbot renew --rsa-key-size 4096
