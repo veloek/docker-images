@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:bullseye
 MAINTAINER Louis Fradin <louis.fradin@gmail.com>
 
 # Update distrib
